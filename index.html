@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maple Keep</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/addCard.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <header>
+            <h2>Maple Keep</h2>
+            <div id="g_id_signin"></div>
+        </header>
+        <pre id="output" style="display: none;"></pre>
+        <nav>
+            <a href="#home" onclick="showPage('home')">主页</a>
+            <a id="plink" href="#property" onclick="showPage('property')">财产</a>
+            <a href="#consumption" onclick="showPage('consumption')">消费</a>
+            <a href="#subscription" onclick="showPage('subscription')">订阅</a>
+        </nav>
+        <main>
+            <div id="home" class="page">🏠 这里是首页内容</div>
+
+
+
+            <div id="property" class="page" style="display: none;">
+                <div id="modal" class="modal hidden">
+                    <div class="modal-content" id="modal-content">
+                        <h3>新财产</h3>
+                        <label>
+                            名称：
+                            <input type="text" id="cardTitle" placeholder="它叫什么?">
+                        </label>
+
+                        <label for="currency" id="currencyLabel">
+                            币种：
+                            <select id="currency">
+                                <option value="CNY">CNY (¥)</option>
+                                <option value="HKD">HKD ($)</option>
+                                <option value="USD">USD ($)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="JPY">JPY (¥)</option>
+                            </select>
+                        </label>
+
+                        <label for="amount">
+                            金额：
+                            <input type="number" id="amount" step="0.01" min="0" placeholder="多少钱?">
+                        </label>
+
+                        <label for="date">
+                            日期：
+                            <input type="date" id="date">
+                        </label>
+
+                        <label>
+                            备注：
+                            <input type="text" id="cardContent" placeholder="还要什么想写的?"></textarea>
+                        </label>
+                        <div class="buttonGroup">
+                            <button id="confirmBtn">确认</button>
+                            <button id="cancelBtn">取消</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="deleteConfirmation" class="modal hidden">
+                    <div class="modal-content" style="width: 10rem;">
+                        <h3 style="text-align: center;">确认删除</h3>
+                        <div class="deleteCancel">
+                            <button id="delete">删除</button>
+                            <button id="cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="property-general">
+                    <h3 style="margin-top: 0;margin-bottom: 0.3rem;">我的财产</h3>
+                    <table id="property-table">
+                        <thead>
+                            <tr>
+                                <th>总价值</th>
+                                <th>本月消费</th>
+                                <th>每日花费</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>511</td>
+                                <td>20</td>
+                                <td>7.29</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="cardContainer" class="card-container">
+                    <button id="addBtn" style="padding: 1rem;"><img src="svg/add.svg" alt="add"
+                            style="width: 5rem;"></button>
+                </div>
+
+            </div>
+
+
+
+
+            <div id="consumption" class="page" style="display: none;">📬 消费</div>
+            <div id="subscription" class="page" style="display: none;">📬 订阅</div>
+
+        </main>
+        <footer>
+            <p>© 2025 Maple Feng</p>
+        </footer>
+    </div>
+
+    <script src="js/index.js"></script>
+    <script src="js/addCard.js"></script>
+</body>
+
+</html>

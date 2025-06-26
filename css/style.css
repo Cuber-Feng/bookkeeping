@@ -1,0 +1,89 @@
+html {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    ;
+}
+
+#g_id_signin {
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+}
+
+header,
+nav,
+main,
+footer {
+    padding: 1rem;
+}
+
+nav {
+    background-color: #384B70;
+    color: white;
+    display: flex;
+    padding: 0rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+header {
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+main {
+    padding: 1rem;
+    flex: 1;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    background-color: #B8001F;
+    color: white;
+    text-align: center;
+    padding: 0rem;
+}
+
+button {
+    background-color: #507687;
+    color: white;
+    border: 0;
+    border-radius: 0.2rem;
+    padding: 0.4rem 0.8rem;
+}
+
+button:hover {
+    background-color: #507687c9;
+}
+
+#property-table {
+    background-color: #384b702a;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#property-table td,th {
+    text-align: center;
+    padding: 0.2rem 0.5rem;
+}

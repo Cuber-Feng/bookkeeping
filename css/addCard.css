@@ -84,7 +84,7 @@ input {
 .deleteCancel {
     display: flex;
     gap: 0.6rem;
-    justify-content: center; 
+    justify-content: center;
 }
 
 #confirmBtn,
@@ -92,7 +92,18 @@ input {
     background-color: #38548b;
 }
 
+
+#confirmBtn:hover,
+#cancel:hover {
+    background-color: darkblue;
+}
+
 #cancelBtn,
 #delete {
     background-color: #B8001F;
+}
+
+#cancelBtn:hover,
+#delete:hover {
+    background-color: rgb(152, 0, 0);
 }

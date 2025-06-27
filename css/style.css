@@ -73,10 +73,6 @@ button {
     padding: 0.4rem 0.8rem;
 }
 
-button:hover {
-    background-color: #507687c9;
-}
-
 #property-table {
     background-color: #384b702a;
     border-radius: 8px;

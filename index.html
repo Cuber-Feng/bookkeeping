@@ -78,7 +78,17 @@
                     </div>
                 </div>
                 <div id="property-general">
-                    <h3 style="margin-top: 0;margin-bottom: 0.3rem;">我的财产</h3>
+                    <div id="propertyHeader">
+                        <h3 style="margin-top: 0;margin-bottom: 0.3rem;">我的财产</h3>
+                        <select id="currencySelect">
+                            <option value="HKD">HKD ($)</option>
+                            <option value="USD">USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="JPY">JPY (¥)</option>
+                            <option value="CNY">CNY (¥)</option>
+                        </select>
+                    </div>
+
                     <table id="property-table">
                         <thead>
                             <tr>
@@ -89,9 +99,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>511</td>
-                                <td>20</td>
-                                <td>7.29</td>
+                                <td id="totalAmount">0</td>
+                                <td id="monthAmount">0</td>
+                                <td id="amountPerDay">0</td>
                             </tr>
                         </tbody>
                     </table>

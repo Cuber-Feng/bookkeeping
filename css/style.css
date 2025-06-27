@@ -83,7 +83,14 @@ button:hover {
     margin-bottom: 1rem;
 }
 
-#property-table td,th {
+#property-table td,
+th {
     text-align: center;
     padding: 0.2rem 0.5rem;
+}
+
+#propertyHeader {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
 }

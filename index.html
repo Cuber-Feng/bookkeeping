@@ -14,7 +14,7 @@
     <div class="page-wrapper">
         <header>
             <h2>Maple Keep</h2>
-            <div id="g_id_signin"></div>
+            <div></div>
         </header>
         <pre id="output" style="display: none;"></pre>
         <nav>
@@ -24,9 +24,34 @@
             <a href="#subscription" onclick="showPage('subscription')">订阅</a>
         </nav>
         <main>
-            <div id="home" class="page">🏠 这里是首页内容</div>
-
-
+            <div id="home" class="page">
+                <div id="homeHeader" class="pageHeader">
+                    <h3>Everyday</h3>
+                    <select id="home-currencySelect" class="currencySelect">
+                        <option value="HKD">HKD ($)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="JPY">JPY (¥)</option>
+                        <option value="CNY">CNY (¥)</option>
+                    </select>
+                </div>
+                <table id="home-table">
+                    <thead>
+                        <tr>
+                            <th>财产</th>
+                            <th>消费</th>
+                            <th>订阅</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="home-everday-property">0</td>
+                            <td id="home-everday-consumption">0</td>
+                            <td id="home-everday-subscription">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div id="property" class="page" style="display: none;">
                 <div id="modal" class="modal hidden">
@@ -41,11 +66,11 @@
                         <label for="currency" id="currencyLabel">
                             币种：
                             <select id="currency">
-                                <option value="CNY">CNY (¥)</option>
                                 <option value="HKD">HKD ($)</option>
                                 <option value="USD">USD ($)</option>
                                 <option value="EUR">EUR (€)</option>
                                 <option value="JPY">JPY (¥)</option>
+                                <option value="CNY">CNY (¥)</option>
                             </select>
                         </label>
 
@@ -80,9 +105,9 @@
                     </div>
                 </div>
                 <div id="property-general">
-                    <div id="propertyHeader">
-                        <h3 style="margin-top: 0;margin-bottom: 0.3rem;">我的财产</h3>
-                        <select id="currencySelect">
+                    <div id="propertyHeader" class="pageHeader">
+                        <h3>Property</h3>
+                        <select id="currencySelect" class="currencySelect">
                             <option value="HKD">HKD ($)</option>
                             <option value="USD">USD ($)</option>
                             <option value="EUR">EUR (€)</option>
@@ -101,7 +126,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td id="totalAmount">0</td>
+                                <td id="property-total">0</td>
                                 <td id="monthAmount">0</td>
                                 <td id="amountPerDay">0</td>
                             </tr>
@@ -116,11 +141,62 @@
 
             </div>
 
+            <div id="consumption" class="page" style="display: none;">
+                <div id="homeHeader" class="pageHeader">
+                    <h3>Consumption</h3>
+                    <select id="consumption-currencySelect" class="currencySelect">
+                        <option value="HKD">HKD ($)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="JPY">JPY (¥)</option>
+                        <option value="CNY">CNY (¥)</option>
+                    </select>
+                </div>
+                <table id="consumption-table">
+                    <thead>
+                        <tr>
+                            <th>本月消费</th>
+                            <th>每日消费</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="consumption-month">0</td>
+                            <td id="consumption-daily">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
 
-
-            <div id="consumption" class="page" style="display: none;">📬 消费</div>
-            <div id="subscription" class="page" style="display: none;">📬 订阅</div>
+            <div id="subscription" class="page" style="display: none;">
+                <div id="homeHeader" class="pageHeader">
+                    <h3>Subscription</h3>
+                    <select id="subscription-currencySelect" class="currencySelect">
+                        <option value="HKD">HKD ($)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="JPY">JPY (¥)</option>
+                        <option value="CNY">CNY (¥)</option>
+                    </select>
+                </div>
+                <table id="subscription-table">
+                    <thead>
+                        <tr>
+                            <th>每月花销</th>
+                            <th>每日花销</th>
+                            <th>数量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="subscription-month">0</td>
+                            <td id="subscription-daily">0</td>
+                            <td id="subscription-number">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
         </main>
         <footer>

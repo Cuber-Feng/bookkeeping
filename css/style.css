@@ -45,6 +45,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    justify-content: space-between;
 }
 
 main {
@@ -73,20 +74,28 @@ button {
     padding: 0.4rem 0.8rem;
 }
 
-#property-table {
+.page table {
     background-color: #384b702a;
     border-radius: 8px;
     margin-bottom: 1rem;
 }
 
-#property-table td,
-th {
+.page table td,
+.page table th {
     text-align: center;
     padding: 0.2rem 0.5rem;
 }
 
-#propertyHeader {
+.pageHeader {
     display: flex;
     gap: 1rem;
     margin-bottom: 0.5rem;
+    align-items: center;
+}
+.pageHeader h3 {
+    margin: 0;
+}
+
+h2  {
+    margin: 0;
 }

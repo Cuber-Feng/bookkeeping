@@ -63,10 +63,10 @@ const propertyDeleteBtn = document.getElementById('delete');
 const propertyDeleteCancelBtn = document.getElementById('cancel');
 
 propertyAddBtn.onclick = () => {
-    propertyModal.classList.remove('hidden');
+    appearElementById('modal');
 };
 propertyAddingCancelBtn.onclick = () => {
-    propertyModal.classList.add('hidden');
+    disappearElementById('modal');
 };
 
 // 0. 获取今天的日期, 把选择器里的日期默认为今天的
@@ -91,7 +91,7 @@ propertyAddingConfirmBtn.onclick = () => {
         alert("金额不能为空! ");
         return;
     }
-    
+
     addProperty(title, content, amount, currency, date);
     localStorage.setItem('propertyList', JSON.stringify(properties));
     addCard(title, content, amount, currency, date)
@@ -101,7 +101,7 @@ propertyAddingConfirmBtn.onclick = () => {
     document.getElementById('cardTitle').value = '';
     document.getElementById('cardContent').value = '';
     document.getElementById('amount').value = '';
-    propertyModal.classList.add('hidden');
+    disappearElementById('modal');
 };
 
 // 1a. [property] 在properties(数组)里添加
@@ -151,15 +151,19 @@ function renderPropertyCards() {
 document.getElementById('cardContainer').addEventListener('click', function (e) {
     const card = e.target.closest('.card');
     if (card) {
-        document.getElementById('deleteConfirmation').classList.remove('hidden');
+        appearElementById('deleteConfirmation');
+
         console.log('你点击的是卡片 ID:', card.id);
         propertyDeleteBtn.onclick = () => {
             properties = deleteByTitle(properties, card.id);
             localStorage.setItem('propertyList', JSON.stringify(properties));
             renderPropertyCards();
-            document.getElementById('deleteConfirmation').classList.add('hidden');
+
+            disappearElementById('deleteConfirmation');
         };
-        propertyDeleteCancelBtn.onclick = () => document.getElementById('deleteConfirmation').classList.add('hidden');
+        propertyDeleteCancelBtn.onclick = () => {
+            disappearElementById('deleteConfirmation');
+        }
     }
 });
 
@@ -273,4 +277,18 @@ function convertCurrency(from, to, amount) {
 // 6. 按title删除array里的元素
 function deleteByTitle(array, titleToDelete) {
     return array.filter(item => item.title !== titleToDelete);
+}
+
+// 7. 逐渐消失
+function disappearElementById(id) {
+    document.getElementById(id).classList.add('hidden');
+    setTimeout(() => {
+        document.getElementById(id).classList.add('off');
+    }, 500);
+}
+
+// 7a. 逐渐出现
+function appearElementById(id) {
+    document.getElementById(id).classList.remove('off');
+    document.getElementById(id).classList.remove('hidden');
 }

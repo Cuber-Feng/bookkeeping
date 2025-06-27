@@ -54,14 +54,6 @@
     display: block;
 }
 
-/* 隐藏类 */
-.hidden {
-    /* display: none; */
-    opacity: 0;
-    /* transform: scale(0); */
-    pointer-events: none;
-}
-
 label {
     display: block;
     margin-bottom: 0.5rem;
@@ -106,4 +98,15 @@ input {
 #cancelBtn:hover,
 #delete:hover {
     background-color: rgb(152, 0, 0);
+}
+
+/* 隐藏 */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 关闭 */
+.off {
+    display: none;
 }

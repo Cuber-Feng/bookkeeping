@@ -5,10 +5,6 @@ html {
     ;
 }
 
-#g_id_signin {
-    display: inline-block;
-}
-
 body {
     margin: 0;
     font-family: sans-serif;
@@ -23,17 +19,30 @@ footer {
 }
 
 nav {
-    background-color: #384B70;
-    color: white;
+    background-color: #dbdbdb;
     display: flex;
     padding: 0rem;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
     padding: 0.4rem 0.8rem;
     text-align: center;
+    color: #2b2b2b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+nav a p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+nav a img {
+    width: 2rem;
 }
 
 nav a:hover {
@@ -136,7 +145,8 @@ h2 {
         position: fixed;
         top: auto;
         bottom: 0;
-        padding-bottom: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
         width: 100vw;
         height: 3rem;
         font-size: 1.5rem;
@@ -146,6 +156,21 @@ h2 {
 
     nav a {
         color: #2b2b2b;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 16vw;
+        box-sizing: border-box;
+    }
+
+    nav a img {
+        width: 2rem;
+    }
+
+    nav a p {
+        margin: 0;
+        padding: 0;
+        font-size: 0.9rem;
     }
 
     .pageHeader {

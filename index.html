@@ -20,10 +20,26 @@
         </header>
         <pre id="output" style="display: none;"></pre>
         <nav>
-            <a href="#home" onclick="showPage('home')">主页</a>
-            <a id="plink" href="#property" onclick="showPage('property')">财产</a>
-            <a href="#consumption" onclick="showPage('consumption')">消费</a>
-            <a href="#subscription" onclick="showPage('subscription')">订阅</a>
+            <a href="#consumption" onclick="showPage('consumption')">
+                <img src="./icon/money.png" alt="home">
+                <p>Expense</p>
+            </a>
+            <a id="plink" href="#property" onclick="showPage('property')">
+                <img src="./icon/computer.png" alt="home">
+                <p>Asset</p>
+            </a>
+            <a href="#home" onclick="showPage('home')">
+                <img src="./icon/home.svg" alt="home">
+                <p>Home</p>
+            </a>
+            <a id="cubelink" href="#cube" onclick="showPage('cube')">
+                <img src="./icon/rubikscube.png" alt="home">
+                <p>Cube</p>
+            </a>
+            <a href="#subscription" onclick="showPage('subscription')">
+                <img src="./icon/calendar.png" alt="home">
+                <p>Monthly</p>
+            </a>
         </nav>
         <main>
             <div id="home" class="page">
@@ -95,7 +111,7 @@
                             <button id="cancelBtn">取消</button>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div id="deleteConfirmation" class="modal hidden off">
                     <div class="modal-content" style="width: 10rem;">
                         <h3 style="text-align: center;margin: 1rem 0 0 0;">确认删除</h3>
@@ -170,6 +186,32 @@
                 </table>
             </div>
 
+            <div id="cube" class="page" style="display: none;">
+                <div id="homeHeader" class="pageHeader">
+                    <h3>Rubik's Cube</h3>
+                    <select id="consumption-currencySelect" class="currencySelect">
+                        <option value="HKD">HKD ($)</option>
+                        <option value="USD">USD ($)</option>
+                        <option value="EUR">EUR (€)</option>
+                        <option value="JPY">JPY (¥)</option>
+                        <option value="CNY">CNY (¥)</option>
+                    </select>
+                </div>
+                <table id="consumption-table">
+                    <thead>
+                        <tr>
+                            <th>买魔方</th>
+                            <th>比赛</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="consumption-month">0</td>
+                            <td id="consumption-daily">0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <div id="subscription" class="page" style="display: none;">
                 <div id="homeHeader" class="pageHeader">

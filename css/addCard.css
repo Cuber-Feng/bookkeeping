@@ -19,6 +19,11 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.dark .card,
+.dark #addBtn {
+    background-color: #2b2b2b;
+}
+
 .card:hover,
 #addBtn:hover {
     background-color: #38548b1c;
@@ -54,6 +59,10 @@
     display: block;
 }
 
+.dark .modal-content {
+    background-color: #2b2b2b;
+}
+
 label {
     display: block;
     margin-bottom: 0.5rem;
@@ -65,6 +74,11 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
+}
+
+.dark select, .dark input{
+    background-color: #2b2b2b;
+    color: white;
 }
 
 .buttonGroup {

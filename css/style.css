@@ -2,13 +2,17 @@ html {
     max-width: 1000px;
     margin: 0 auto;
     background-color: #f4f4f4;
-    ;
 }
 
 body {
     margin: 0;
     font-family: sans-serif;
     line-height: 1.6;
+}
+
+body.dark {
+    background-color: #1e1e1e;
+    color:white;
 }
 
 header,
@@ -22,16 +26,26 @@ nav {
     background-color: #dbdbdb;
     display: flex;
     padding: 0rem;
+    color: #2b2b2b;
+}
+
+.dark nav{
+    background-color: #2b2b2b;
+    color: white;
 }
 
 nav a {
     text-decoration: none;
     padding: 0.4rem 0.8rem;
     text-align: center;
-    color: #2b2b2b;
     display: flex;
     flex-direction: row;
     align-items: center;
+    color: black;
+}
+
+.dark nav a {
+    color: white;
 }
 
 
@@ -55,6 +69,10 @@ header {
     align-items: center;
     gap: 1rem;
     justify-content: space-between;
+}
+
+.dark header{
+    background-color: #1e1e1e;
 }
 
 main {
@@ -110,6 +128,15 @@ h2 {
     margin: 0;
 }
 
+.currencySelect {
+    background-color: #3737370f;
+}
+
+.dark .currencySelect {
+    background-color: #1e1e1e;
+    color: white;
+}
+
 /* 大平板 */
 @media (max-width: 1000px) {
 
@@ -161,6 +188,10 @@ h2 {
         align-items: center;
         width: 16vw;
         box-sizing: border-box;
+    }
+
+    .dark nav a{
+        color: white;
     }
 
     nav a img {

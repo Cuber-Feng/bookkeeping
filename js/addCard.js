@@ -1,3 +1,9 @@
+window.onload = () => {
+    loadDateFromLocalStorage();
+    cur = document.getElementById('currencySelect').value;
+    calculateData('HKD');
+}
+
 let exchangeRate;
 
 async function getExchangeRate() {
@@ -25,12 +31,6 @@ async function getExchangeRate() {
 }
 
 getExchangeRate();
-
-window.onload = () => {
-    loadDateFromLocalStorage();
-    cur = document.getElementById('currencySelect').value;
-    calculateData('HKD');
-}
 
 // 选择不同币种显示总金额的时候调用计算函数
 document.querySelectorAll('.currencySelect').forEach(el => {

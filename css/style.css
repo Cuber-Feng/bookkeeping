@@ -73,15 +73,17 @@ button {
 }
 
 .page table {
-    background-color: #384b702a;
+    background-color: #3737370f;
     border-radius: 8px;
     margin-bottom: 1rem;
+    box-sizing: border-box;
 }
 
 .page table td,
 .page table th {
     text-align: center;
     padding: 0.2rem 0.5rem;
+    box-sizing: border-box;
 }
 
 .pageHeader {
@@ -90,10 +92,88 @@ button {
     margin-bottom: 0.5rem;
     align-items: center;
 }
+
 .pageHeader h3 {
     margin: 0;
 }
 
-h2  {
+h2 {
     margin: 0;
+}
+
+/* 大平板 */
+@media (max-width: 1000px) {
+
+    #addBtn,
+    .card {
+        width: 22vw;
+        box-sizing: border-box;
+    }
+
+}
+
+/* 小平板 */
+@media (max-width: 800px) {
+    body {
+        overflow: hidden;
+    }
+
+    .page-wrapper {
+        overflow: auto;
+        height: 90vh;
+    }
+
+    #addBtn,
+    .card {
+        width: 28vw;
+        box-sizing: border-box;
+    }
+
+    nav {
+        justify-content: space-evenly;
+        /* 主軸分散排列 */
+        align-items: center;
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        width: 100vw;
+        height: 3rem;
+        font-size: 1.5rem;
+        background-color: #F2F2F2;
+        border-top: rgb(200, 200, 200) 1px solid;
+    }
+
+    nav a {
+        color: #2b2b2b;
+    }
+
+    .pageHeader {
+        justify-content: space-between
+    }
+
+    .page table {
+        margin-left: auto;
+        margin-right: auto;
+        width: 92vw;
+        font-size: 1.3rem;
+    }
+
+    header {
+        display: none;
+    }
+
+    .pageHeader h3 {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+}
+
+/* 手機(≤600px) */
+@media (max-width: 600px) {
+
+    #addBtn,
+    .card {
+        width: 43vw;
+        box-sizing: border-box;
+    }
 }

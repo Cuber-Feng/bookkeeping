@@ -136,6 +136,7 @@ h2 {
         position: fixed;
         top: auto;
         bottom: 0;
+        padding-bottom: 3rem;
         width: 100vw;
         height: 3rem;
         font-size: 1.5rem;

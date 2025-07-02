@@ -292,3 +292,43 @@ function appearElementById(id) {
     document.getElementById(id).classList.remove('off');
     document.getElementById(id).classList.remove('hidden');
 }
+
+
+// 下载当前 localStorage 数据
+function downloadData() {
+    const dataStr = localStorage.getItem("propertyList") || "{}";
+    const blob = new Blob([dataStr], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "propertyList.json";
+    a.click();
+
+    URL.revokeObjectURL(url);
+}
+
+// 导入本地 JSON 文件
+function importData(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        try {
+            const json = JSON.parse(e.target.result);
+            // 这里你可以加验证 json 结构的代码，确保格式正确
+
+            localStorage.setItem("propertyList", JSON.stringify(json));
+            alert("导入成功，页面将刷新。");
+            loadDateFromLocalStorage();
+            calculateData('HKD');
+        } catch (error) {
+            alert("导入失败：文件内容不是有效的 JSON。");
+        }
+    };
+    reader.readAsText(file);
+
+    // 重置文件输入，方便下次导入同一文件
+    event.target.value = "";
+}

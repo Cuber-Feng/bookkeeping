@@ -227,6 +227,14 @@ h2 {
         font-size: 2rem;
         margin-left: 1rem;
     }
+
+    #fileOperation {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .fileBtn {
+        width: 43vw;
+    }
 }
 
 /* 手機(≤600px) */

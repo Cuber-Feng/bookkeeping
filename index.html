@@ -69,6 +69,12 @@
                         </tr>
                     </tbody>
                 </table>
+                <div id="fileOperation">
+                    <button onclick="downloadData()" data-i18n="export" class="fileBtn">导出</button>
+                    <button onclick="document.getElementById('fileInput').click()" data-i18n="import"
+                        class="fileBtn">导入</button>
+                </div>
+                <input type="file" id="fileInput" style="display:none" accept=".json" onchange="importData(event)" />
             </div>
 
             <div id="property" class="page" style="display: none;">

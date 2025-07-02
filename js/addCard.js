@@ -1,8 +1,8 @@
-window.onload = () => {
+window.addEventListener("load", (event) => {
     loadDateFromLocalStorage();
     cur = document.getElementById('currencySelect').value;
     calculateData('HKD');
-}
+});
 
 let exchangeRate;
 

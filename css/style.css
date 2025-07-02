@@ -12,7 +12,7 @@ body {
 
 body.dark {
     background-color: #1e1e1e;
-    color:white;
+    color: white;
 }
 
 header,
@@ -29,7 +29,7 @@ nav {
     color: #2b2b2b;
 }
 
-.dark nav{
+.dark nav {
     background-color: #2b2b2b;
     color: white;
 }
@@ -71,7 +71,7 @@ header {
     justify-content: space-between;
 }
 
-.dark header{
+.dark header {
     background-color: #1e1e1e;
 }
 
@@ -190,7 +190,11 @@ h2 {
         box-sizing: border-box;
     }
 
-    .dark nav a{
+    nav a:hover {
+        background-color: transparent;
+    }
+
+    .dark nav a {
         color: white;
     }
 
@@ -201,7 +205,7 @@ h2 {
     nav a p {
         margin: 0;
         padding: 0;
-        font-size: 0.9rem;
+        font-size: 0.7rem;
     }
 
     .pageHeader {

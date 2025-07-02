@@ -45,13 +45,17 @@
             <div id="home" class="page">
                 <div id="homeHeader" class="pageHeader">
                     <h3>Everyday</h3>
-                    <select id="home-currencySelect" class="currencySelect">
-                        <option value="HKD">HKD ($)</option>
-                        <option value="USD">USD ($)</option>
-                        <option value="EUR">EUR (€)</option>
-                        <option value="JPY">JPY (¥)</option>
-                        <option value="CNY">CNY (¥)</option>
-                    </select>
+                    <div class="md-select-container">
+                        <label for="home-currencySelect">币种</label>
+                        <select id="home-currencySelect" class="currencySelect md-select">
+                            <option value="HKD">HKD ($)</option>
+                            <option value="USD">USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="JPY">JPY (¥)</option>
+                            <option value="CNY">CNY (¥)</option>
+                        </select>
+                    </div>
+
                 </div>
                 <table id="home-table">
                     <thead>
@@ -70,9 +74,9 @@
                     </tbody>
                 </table>
                 <div id="fileOperation">
-                    <button onclick="downloadData()" data-i18n="export" class="fileBtn">导出</button>
+                    <button onclick="downloadData()" data-i18n="export" class="fileBtn md-button">导出</button>
                     <button onclick="document.getElementById('fileInput').click()" data-i18n="import"
-                        class="fileBtn">导入</button>
+                        class="fileBtn md-button">导入</button>
                 </div>
                 <input type="file" id="fileInput" style="display:none" accept=".json" onchange="importData(event)" />
             </div>
@@ -131,13 +135,17 @@
                 <div id="property-general">
                     <div id="propertyHeader" class="pageHeader">
                         <h3>Property</h3>
-                        <select id="currencySelect" class="currencySelect">
-                            <option value="HKD">HKD ($)</option>
-                            <option value="USD">USD ($)</option>
-                            <option value="EUR">EUR (€)</option>
-                            <option value="JPY">JPY (¥)</option>
-                            <option value="CNY">CNY (¥)</option>
-                        </select>
+
+                        <div class="md-select-container">
+                            <label for="currencySelect" id="currencyLabel">币种</label>
+                            <select id="currencySelect" class="currencySelect md-select">
+                                <option value="HKD">HKD ($)</option>
+                                <option value="USD">USD ($)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="JPY">JPY (¥)</option>
+                                <option value="CNY">CNY (¥)</option>
+                            </select>
+                        </div>
                     </div>
 
                     <table id="property-table">
@@ -169,13 +177,17 @@
             <div id="consumption" class="page" style="display: none;">
                 <div id="homeHeader" class="pageHeader">
                     <h3>Consumption</h3>
-                    <select id="consumption-currencySelect" class="currencySelect">
-                        <option value="HKD">HKD ($)</option>
-                        <option value="USD">USD ($)</option>
-                        <option value="EUR">EUR (€)</option>
-                        <option value="JPY">JPY (¥)</option>
-                        <option value="CNY">CNY (¥)</option>
-                    </select>
+
+                    <div class="md-select-container">
+                        <label for="consumption-currencySelect">币种</label>
+                        <select id="consumption-currencySelect" class="currencySelect md-select">
+                            <option value="HKD">HKD ($)</option>
+                            <option value="USD">USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="JPY">JPY (¥)</option>
+                            <option value="CNY">CNY (¥)</option>
+                        </select>
+                    </div>
                 </div>
                 <table id="consumption-table">
                     <thead>
@@ -196,13 +208,17 @@
             <div id="cube" class="page" style="display: none;">
                 <div id="homeHeader" class="pageHeader">
                     <h3>Rubik's Cube</h3>
-                    <select id="consumption-currencySelect" class="currencySelect">
-                        <option value="HKD">HKD ($)</option>
-                        <option value="USD">USD ($)</option>
-                        <option value="EUR">EUR (€)</option>
-                        <option value="JPY">JPY (¥)</option>
-                        <option value="CNY">CNY (¥)</option>
-                    </select>
+
+                    <div class="md-select-container">
+                        <label for="consumption-currencySelect" id="currencyLabel">币种</label>
+                        <select id="consumption-currencySelect" class="currencySelect md-select">
+                            <option value="HKD">HKD ($)</option>
+                            <option value="USD">USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="JPY">JPY (¥)</option>
+                            <option value="CNY">CNY (¥)</option>
+                        </select>
+                    </div>
                 </div>
                 <table id="consumption-table">
                     <thead>
@@ -223,13 +239,16 @@
             <div id="subscription" class="page" style="display: none;">
                 <div id="homeHeader" class="pageHeader">
                     <h3>Subscription</h3>
-                    <select id="subscription-currencySelect" class="currencySelect">
-                        <option value="HKD">HKD ($)</option>
-                        <option value="USD">USD ($)</option>
-                        <option value="EUR">EUR (€)</option>
-                        <option value="JPY">JPY (¥)</option>
-                        <option value="CNY">CNY (¥)</option>
-                    </select>
+                    <div class="md-select-container">
+                        <label for="subscription-currencySelect" id="currencyLabel">币种</label>
+                        <select id="subscription-currencySelect" class="currencySelect md-select">
+                            <option value="HKD">HKD ($)</option>
+                            <option value="USD">USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="JPY">JPY (¥)</option>
+                            <option value="CNY">CNY (¥)</option>
+                        </select>
+                    </div>
                 </div>
                 <table id="subscription-table">
                     <thead>

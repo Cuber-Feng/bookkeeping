@@ -137,6 +137,73 @@ h2 {
     color: white;
 }
 
+
+.md-button {
+    background-color: #415F91;
+    color: white;
+    padding: 10px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: box-shadow 0.2s, background-color 0.2s;
+}
+
+.md-button:hover {
+    background-color: #37507a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.md-button:active {
+    background-color: #4b6aa1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.md-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+
+.md-select-container {
+    position: relative;
+}
+
+.md-select-container label {
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    background: #f4f4f4;
+    padding: 0 4px;
+    font-size: 12px;
+    color: #2b2b2b;
+    pointer-events: none;
+}
+
+.md-select {
+    width: 100%;
+    border: 1.5px solid #ccc;
+    border-radius: 6px;
+    background-color: #f4f4f4;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%236200ee' height='24' viewBox='0 0 24 24' width='24'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 20px 20px;
+}
+
+.md-select:focus {
+    border-color: #6200ee;
+    box-shadow: 0 0 0 2px rgba(98, 0, 238, 0.2);
+}
+
+
 /* 大平板 */
 @media (max-width: 1000px) {
 
@@ -230,8 +297,12 @@ h2 {
 
     #fileOperation {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
+        width: 92vw;
+        margin-left: auto;
+        margin-right: auto;
     }
+
     .fileBtn {
         width: 43vw;
         font-size: 1.3rem;

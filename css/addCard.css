@@ -12,7 +12,8 @@ label {
 }
 
 /* 卡片样式 */
-.card, .cubeCard,
+.card,
+.cubeCard,
 .addBtn {
     background: #f9f9f9;
     padding: 0 1rem;
@@ -27,8 +28,7 @@ label {
 }
 
 .card:hover,
-.cubeCard:hover
-#addBtn:hover {
+.cubeCard:hover #addBtn:hover {
     background-color: #38548b1c;
 }
 
@@ -37,8 +37,7 @@ label {
     margin: 0.2rem 0;
 }
 
-.card h3
-.cubeCard h3 {
+.card h3 .cubeCard h3 {
     margin: 0.5rem 0 0.3rem 0;
 }
 
@@ -100,23 +99,27 @@ input {
 }
 
 #confirmBtn,
-#cancel {
+#cancel,
+.blueBtn {
     background-color: #38548b;
 }
 
 
 #confirmBtn:hover,
-#cancel:hover {
+#cancel:hover, 
+.blueBtn:hover {
     background-color: darkblue;
 }
 
 #cancelBtn,
-#delete {
+#delete,
+.redBtn {
     background-color: #B8001F;
 }
 
 #cancelBtn:hover,
-#delete:hover {
+#delete:hover, 
+.redBtn:hover {
     background-color: rgb(152, 0, 0);
 }
 

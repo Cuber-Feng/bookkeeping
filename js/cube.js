@@ -127,8 +127,8 @@ document.getElementById('cubeCardContainer').addEventListener('click', function 
 
             disappearElementById('deleteCubeConfirmation');
         };
-        propertyDeleteCancelBtn.onclick = () => {
-            disappearElementById('deleteConfirmation');
+        document.getElementById('cube-cancel').onclick = () => {
+            disappearElementById('deleteCubeConfirmation');
         }
     }
 });

@@ -209,8 +209,8 @@ h2 {
 /* 大平板 */
 @media (max-width: 1000px) {
 
-    #addBtn,
-    .card {
+    .addBtn,
+    .card, .cubeCard {
         width: 22vw;
         box-sizing: border-box;
     }
@@ -228,8 +228,8 @@ h2 {
         height: 90vh;
     }
 
-    #addBtn,
-    .card {
+    .addBtn,
+    .card, .cubeCard {
         width: 28vw;
         box-sizing: border-box;
     }
@@ -313,8 +313,9 @@ h2 {
 /* 手機(≤600px) */
 @media (max-width: 600px) {
 
-    #addBtn,
-    .card {
+    .addBtn,
+    .card, .cubeCard
+     {
         width: 43vw;
         box-sizing: border-box;
     }

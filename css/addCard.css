@@ -1,4 +1,5 @@
-button, label{
+button,
+label {
     font-size: 16px;
 }
 
@@ -11,8 +12,8 @@ button, label{
 }
 
 /* 卡片样式 */
-.card,
-#addBtn {
+.card, .cubeCard,
+.addBtn {
     background: #f9f9f9;
     padding: 0 1rem;
     border-radius: 8px;
@@ -20,20 +21,24 @@ button, label{
 }
 
 .dark .card,
-.dark #addBtn {
+.dark #addBtn,
+.dark .cubeCard {
     background-color: #2b2b2b;
 }
 
 .card:hover,
+.cubeCard:hover
 #addBtn:hover {
     background-color: #38548b1c;
 }
 
-.card p {
+.card p,
+.cubeCard p {
     margin: 0.2rem 0;
 }
 
-.card h3 {
+.card h3
+.cubeCard h3 {
     margin: 0.5rem 0 0.3rem 0;
 }
 
@@ -76,7 +81,8 @@ input {
     font-size: 16px;
 }
 
-.dark select, .dark input{
+.dark select,
+.dark input {
     background-color: #2b2b2b;
     color: white;
 }

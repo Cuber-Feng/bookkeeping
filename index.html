@@ -21,23 +21,23 @@
         <pre id="output" style="display: none;"></pre>
         <nav>
             <a href="#consumption" onclick="showPage('consumption')">
-                <img id='money-icon' src="./icon/money.png" alt="home">
+                <img id='money-icon' src="./icon/money.png" alt="money-icon">
                 <p>Expense</p>
             </a>
             <a id="plink" href="#property" onclick="showPage('property')">
-                <img id='computer-icon' src="./icon/computer.png" alt="home">
+                <img id='computer-icon' src="./icon/computer.png" alt="computer-icon">
                 <p>Asset</p>
             </a>
             <a href="#home" onclick="showPage('home')">
-                <img id='home-icon' src="./icon/home.png" alt="home">
+                <img id='home-icon' src="./icon/home.png" alt="home-icon">
                 <p>Home</p>
             </a>
             <a id="cubelink" href="#cube" onclick="showPage('cube')">
-                <img id='rubikscube-icon' src="./icon/rubikscube.png" alt="home">
+                <img id='rubikscube-icon' src="./icon/rubikscube.png" alt="rubikscube-icon">
                 <p>Cube</p>
             </a>
             <a href="#subscription" onclick="showPage('subscription')">
-                <img id='calendar-icon' src="./icon/calendar.png" alt="home">
+                <img id='calendar-icon' src="./icon/calendar.png" alt="calendar-icon">
                 <p>Monthly</p>
             </a>
         </nav>
@@ -63,6 +63,7 @@
                             <th>财产</th>
                             <th>消费</th>
                             <th>订阅</th>
+                            <th>魔方</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -70,6 +71,7 @@
                             <td id="home-everday-property">0</td>
                             <td id="home-everday-consumption">0</td>
                             <td id="home-everday-subscription">0</td>
+                            <td id="home-everday-cube">0</td>
                         </tr>
                     </tbody>
                 </table>
@@ -135,7 +137,6 @@
                 <div id="property-general">
                     <div id="propertyHeader" class="pageHeader">
                         <h3>Property</h3>
-
                         <div class="md-select-container">
                             <label for="currencySelect" id="currencyLabel">币种</label>
                             <select id="currencySelect" class="currencySelect md-select">
@@ -167,7 +168,7 @@
                 </div>
 
                 <div id="cardContainer" class="card-container">
-                    <button id="addBtn" style="padding: 1rem;">
+                    <button id="addBtn" class='addBtn' style="padding: 1rem;">
                         <img id='addBtnImg' src="svg/add.svg" alt="add" style="width: 5rem;">
                     </button>
                 </div>
@@ -229,11 +230,69 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td id="consumption-month">0</td>
-                            <td id="consumption-daily">0</td>
+                            <td id="cube-total">0</td>
+                            <td id="comp-total">0</td>
                         </tr>
                     </tbody>
                 </table>
+
+                <div id="addCube" class="modal hidden off">
+                    <div class="modal-content" id="addCube-content">
+                        <h3 style="margin: 1rem 0 0 0;">新魔方</h3>
+                        <hr>
+                        <label>
+                            名称：
+                            <input type="text" id="cubeCardTitle" placeholder="什么魔方?">
+                        </label>
+
+                        <label>
+                            币种：
+                            <select id="cubeCurrency">
+                                <option value="HKD">HKD ($)</option>
+                                <option value="USD">USD ($)</option>
+                                <option value="EUR">EUR (€)</option>
+                                <option value="JPY">JPY (¥)</option>
+                                <option value="CNY">CNY (¥)</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            金额：
+                            <input type="number" id="cubeAmount" step="0.01" min="0" placeholder="多少钱?">
+                        </label>
+
+                        <label>
+                            日期：
+                            <input type="date" id="cubeDate">
+                        </label>
+
+                        <label>
+                            备注：
+                            <input type="text" id="cubeCardContent" placeholder="还要什么想写的?"></textarea>
+                        </label>
+                        <div class="buttonGroup">
+                            <button id="AddCubeConfirmBtn">确认</button>
+                            <button id="AddCubeCancelBtn">取消</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="deleteCubeConfirmation" class="modal hidden off">
+                    <div class="modal-content" style="width: 10rem;">
+                        <h3 style="text-align: center;margin: 1rem 0 0 0;">确认删除</h3>
+                        <hr>
+                        <div class="cube-deleteCancel">
+                            <button id="cube-delete">删除</button>
+                            <button id="cube-cancel">取消</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="cubeCardContainer" class="card-container">
+                    <button id="addCubeBtn" class='addBtn' style="padding: 1rem;">
+                        <img id='addBtnImg' src="svg/add.svg" alt="add" style="width: 5rem;">
+                    </button>
+                </div>
             </div>
 
             <div id="subscription" class="page" style="display: none;">
@@ -276,6 +335,8 @@
 
     <script src="js/index.js?a"></script>
     <script src="js/addCard.js?a"></script>
+    <script src="js/cube.js"></script>
+    <script src="js/helper.js"></script>
 </body>
 
 </html>
